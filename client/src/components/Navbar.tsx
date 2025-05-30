@@ -68,7 +68,7 @@ export function Navbar() {
               className="flex-shrink-0"
             >
               <a href="/" className="block">
-                <Logo size="md" showFullName={true} />
+                <Logo size="md" showFullName={false} />
               </a>
             </motion.div>
             
