@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import medallionLogo from "@/assets/medallion-logo.png";
 
 interface LogoProps {
   className?: string;
@@ -19,7 +20,7 @@ export function Logo({ className, color = "primary", size = "md", showFullName =
     <div className={cn("flex items-center", className)}>
       <div className="flex-shrink-0">
         <img
-          src="/attached_assets/image_1747740986684.png"
+          src={medallionLogo}
           alt="Medallion Engineers"
           className={cn(sizeClasses[size], "object-contain")}
           style={{ filter: color === "white" ? "brightness(0) invert(1)" : "none" }}
