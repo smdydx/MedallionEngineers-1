@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import medallionLogo from "@/assets/medallion-logo.png";
+import medallionLogo from "@/assets/medallion-logo.jpg";
 
 interface LogoProps {
   className?: string;
