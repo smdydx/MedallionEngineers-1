@@ -61,7 +61,7 @@ export default function CompanyOverview() {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold text-primary mb-6">Medallion Group India</h2>
+                <h2 className="text-3xl font-bold text-primary mb-6">Medallion Engineers Private Limited</h2>
                 <p className="text-neutral-700 leading-relaxed mb-6">
                   Founded in 2010, Medallion Engineers Private Limited has established itself as a leading 
                   engineering consultancy firm in India, specializing in infrastructure development, tunnel 

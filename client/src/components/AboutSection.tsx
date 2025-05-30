@@ -98,14 +98,14 @@ export function AboutSection() {
               variants={fadeInUpVariants}
               className="text-2xl font-bold text-primary font-heading mb-4"
             >
-              Medallion Group India
+              Medallion Engineers Private Limited
             </motion.h3>
             
             <motion.p
               variants={fadeInUpVariants}
               className="text-neutral-700 mb-6 leading-relaxed"
             >
-              <span className="font-semibold text-primary">Medallion Group India</span> is a highly professional engineering firm specializing in civil 
+              <span className="font-semibold text-primary">Medallion Engineers Private Limited</span> is a highly professional engineering firm specializing in civil 
               infrastructure development with a focus on tunnel construction and structural engineering. 
               With a team of experienced engineers and industry experts, we deliver innovative solutions 
               for complex engineering challenges.
