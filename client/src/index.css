@@ -64,12 +64,12 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground scroll-smooth;
-    padding-top: 126px; /* Adjust based on header height (64px for smaller screens, 126px for larger screens with top bar) */
+    padding-top: 80px; /* Adjust based on header height */
   }
   
   @media (max-width: 768px) {
     body {
-      padding-top: 64px; /* Smaller padding for mobile screens */
+      padding-top: 70px; /* Smaller padding for mobile screens */
     }
   }
 }
