@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "../components/ui/button";
-import { Mail, MessageCircle, Phone, MapPin, Calendar } from "lucide-react";
+import { Mail, MessageCircle, MapPin, Calendar } from "lucide-react";
 import img from "../assets/demo.jpg";
 import heroVideo from "../assets/photo3.mp4";
 
@@ -23,46 +23,20 @@ const ComingSoon: React.FC = () => {
     window.location.href = "mailto:info@medallionindia.com";
   };
 
-  return (
-    <div className="min-h-screen bg-white">
-      {/* Header Section */}
-      <motion.header
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="bg-red-600 shadow-lg border-b border-red-700 px-6 py-6"
-      >
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-3">
-            <div className="text-xl font-bold text-white">
-              Medallion Engineers Private Limited
-            </div>
-          </div>
-          <div className="flex items-center space-x-4">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={handleEmail}
-              className="flex items-center space-x-2 text-white hover:text-red-200 transition-colors"
-            >
-              <Mail className="h-5 w-5" />
-              <span className="hidden sm:inline">Contact</span>
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={handleWhatsApp}
-              className="flex items-center space-x-2 bg-white text-red-600 px-4 py-2 rounded-lg hover:bg-red-50 transition-colors"
-            >
-              <MessageCircle className="h-5 w-5" />
-              <span className="hidden sm:inline">WhatsApp</span>
-            </motion.button>
-          </div>
-        </div>
-      </motion.header>
+  // Set body padding and margin to 0
+  React.useEffect(() => {
+    document.body.style.padding = "0";
+    document.body.style.margin = "0";
+    return () => {
+      document.body.style.padding = "";
+      document.body.style.margin = "";
+    };
+  }, []);
 
+  return (
+    <div className="min-h-screen bg-white p-0 m-0">
       {/* Hero Section with Video Background */}
-      <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <div className="relative min-h-screen flex items-center justify-center overflow-hidden p-0 m-0">
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
           <video
@@ -78,7 +52,7 @@ const ComingSoon: React.FC = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 text-center text-white">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-0 pb-20 text-center text-white w-full -mt-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -103,9 +77,9 @@ const ComingSoon: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="inline-block bg-blue-600/20 backdrop-blur-sm text-blue-100 px-6 py-3 rounded-full text-sm font-medium border border-blue-400/30"
+              className="inline-block bg-blue-600/20 backdrop-blur-sm text-blue-100 px-6 py-3 rounded-full text-xl font-medium border border-blue-400/30"
             >
-              <Calendar className="inline h-4 w-4 mr-2" />
+              <Calendar className="inline h-8 w-6 mr-2" />
               Coming Soon....
             </motion.div>
 
@@ -163,25 +137,7 @@ const ComingSoon: React.FC = () => {
               transition={{ delay: 0.6, duration: 0.6 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-12"
             >
-              {[
-                { number: "10+", label: "Projects Delivered" },
-                { number: "20+", label: "Expert Engineers" },
-                { number: "1+", label: "Major Cities" },
-                { number: "2025", label: "Established" },
-              ].map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.7 + index * 0.1, duration: 0.6 }}
-                  className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20"
-                >
-                  <div className="text-3xl md:text-4xl font-bold text-blue-300 mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-300 text-sm">{stat.label}</div>
-                </motion.div>
-              ))}
+              
             </motion.div>
 
             {/* Action Buttons */}
@@ -244,19 +200,37 @@ const ComingSoon: React.FC = () => {
                 title: "Infrastructure Development",
                 description:
                   "Complex engineering solutions for transportation, urban development, and industrial facilities with focus on sustainability and innovation.",
-                icon: "🏗️",
+              
+              },
+              {
+                title: "Construction Equipment",
+                description:
+                  "State-of-the-art construction equipment and machinery for efficient project execution, including tunneling, excavation, and heavy lifting.",
+              
               },
               {
                 title: "Tunnel Engineering",
                 description:
                   "Specialized expertise in underground construction, tunnel systems, and subsurface infrastructure with advanced technology.",
-                icon: "🚇",
+                
               },
               {
                 title: "Project Management",
                 description:
                   "End-to-end project delivery with quality assurance, timeline management, and comprehensive oversight across all phases.",
-                icon: "📋",
+                
+              },
+              {
+                title: "Mining and Geotechnical",
+                description:
+                  "Expertise in mining operations, geotechnical investigations, and subsurface analysis to ensure safety and efficiency.",
+                
+              },
+              {
+                title: "Financial Services",
+                description:
+                  "Financial consulting and investment advisory services tailored for engineering projects, ensuring optimal resource allocation and risk management.",
+                
               },
             ].map((service, index) => (
               <motion.div
@@ -267,7 +241,7 @@ const ComingSoon: React.FC = () => {
                 viewport={{ once: true }}
                 className="bg-gray-50 p-8 rounded-xl border border-gray-100 text-center hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="text-4xl mb-4">{service.icon}</div>
+                <div className="text-4xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   {service.title}
                 </h3>
