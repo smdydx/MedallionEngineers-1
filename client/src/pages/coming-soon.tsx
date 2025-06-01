@@ -107,15 +107,71 @@ export default function ComingSoon() {
             </div>
           </motion.div>
 
-          {/* Description */}
-          <motion.p
+          {/* Company Description */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9 }}
-            className="text-lg md:text-xl text-slate-300 leading-relaxed mb-12 max-w-2xl mx-auto"
+            className="mb-12 max-w-4xl mx-auto"
           >
-            हमारी नई वेबसाइट जल्द ही लॉन्च हो रही है। अत्याधुनिक इंजीनियरिंग समाधान और बेहतरीन डिज़ाइन के साथ।
-          </motion.p>
+            {/* Company Image */}
+            <div className="mb-8 flex justify-center">
+              <motion.img
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 1.1 }}
+                src="/attached_assets/1000357991.png"
+                alt="Medallion Engineers Private Limited"
+                className="w-48 h-48 md:w-64 md:h-64 object-contain rounded-2xl bg-white/10 backdrop-blur-lg p-6 border border-white/20 shadow-2xl"
+              />
+            </div>
+
+            <div className="bg-gradient-to-r from-blue-900/30 to-cyan-900/30 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-8 shadow-2xl">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
+                Medallion Engineers Private Limited
+              </h3>
+              
+              <div className="space-y-4 text-slate-200 leading-relaxed">
+                <p className="text-lg">
+                  <strong className="text-cyan-400">Founded in 2010</strong>, Medallion Engineers Private Limited has established itself as a 
+                  <strong className="text-blue-300"> leading engineering consultancy firm in India</strong>, specializing in infrastructure 
+                  development, tunnel engineering, and comprehensive project management solutions.
+                </p>
+                
+                <p className="text-lg">
+                  With our <strong className="text-cyan-400">headquarters in Delhi</strong> and presence across major cities in India, 
+                  we have successfully delivered <strong className="text-blue-300">over 200 projects</strong> across various sectors 
+                  including transportation, urban development, water infrastructure, and industrial facilities.
+                </p>
+                
+                <p className="text-lg">
+                  Our team of <strong className="text-cyan-400">over 50 highly qualified engineers</strong> and specialists brings 
+                  together expertise in structural engineering, geotechnical engineering, project management, and systems integration 
+                  to provide <strong className="text-blue-300">holistic solutions to complex engineering challenges</strong>.
+                </p>
+              </div>
+
+              {/* Key Highlights */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-6 border-t border-white/20">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-cyan-400">2010</div>
+                  <div className="text-sm text-slate-300">Founded</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-300">200+</div>
+                  <div className="text-sm text-slate-300">Projects</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-cyan-400">50+</div>
+                  <div className="text-sm text-slate-300">Engineers</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-300">Delhi</div>
+                  <div className="text-sm text-slate-300">Headquarters</div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
 
           {/* Launch Button */}
           <AnimatePresence>

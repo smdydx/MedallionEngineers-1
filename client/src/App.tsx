@@ -1,6 +1,6 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ComingSoon from './pages/coming-soon';
-import Home from './pages/home';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ComingSoon from "./pages/coming-soon";
+import Home from "./pages/home";
 import About from './pages/about';
 import Services from './pages/services';
 import Projects from './pages/projects';
@@ -30,12 +30,19 @@ import CookieConsent from './components/CookieConsent';
 const queryClient = new QueryClient();
 
 function App() {
+  // Initially show Coming Soon page
+  const showComingSoon = true; // You can change this to false when ready to launch
+
+  if (showComingSoon) {
+    return <ComingSoon />;
+  }
+
   return (
     <QueryClientProvider client={queryClient}>
       <Router>
         <div className="App">
           <Routes>
-            <Route path="/" element={<ComingSoon />} />
+            <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/about/company-overview" element={<CompanyOverview />} />
