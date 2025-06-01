@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "../components/ui/button";
-import img from "../assets/logo.jpg"
+import img from "../assets/logo.jpg";
+
 const ComingSoon: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
 
@@ -30,7 +31,7 @@ const ComingSoon: React.FC = () => {
             className="mb-8"
           >
             <img
-              src="client/src/assets/logo.jpg"
+              src={img}
               alt="Medallion Engineers Private Limited"
               className="mx-auto h-32 md:h-40 w-auto"
             />
