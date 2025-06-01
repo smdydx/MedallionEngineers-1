@@ -106,7 +106,7 @@ const ComingSoon: React.FC = () => {
               className="inline-block bg-blue-600/20 backdrop-blur-sm text-blue-100 px-6 py-3 rounded-full text-sm font-medium border border-blue-400/30"
             >
               <Calendar className="inline h-4 w-4 mr-2" />
-              Coming Soon - Launching 2025
+              Coming Soon....
             </motion.div>
 
             <motion.h1
