@@ -7,140 +7,140 @@ import { CTASection } from "@/components/CTASection";
 import { ChevronRight, MapPin, FileText, Mail } from "lucide-react";
 
 export default function Careers() {
-  const openPositions = [
-    {
-      id: 1,
-      title: "Senior Tunnel Engineer",
-      department: "Engineering",
-      location: "Delhi, India",
-      type: "Full-time",
-      description: "We are seeking an experienced Senior Tunnel Engineer to join our expanding tunnel engineering team. This role involves leading the design and analysis of complex tunnel projects, providing technical guidance to junior engineers, and collaborating with multidisciplinary teams.",
-      requirements: [
-        "Master's degree in Civil Engineering with specialization in Tunnel/Geotechnical Engineering",
-        "8+ years of experience in tunnel design and construction",
-        "Proficiency in tunnel design software (e.g., PLAXIS, RS3, Phase2)",
-        "Experience with NATM and TBM tunneling methods",
-        "Strong analytical and problem-solving skills"
-      ],
-      responsibilities: [
-        "Lead the structural design of tunnel projects from concept to detailed design",
-        "Perform complex geotechnical and structural analyses for tunnel projects",
-        "Provide technical oversight and mentorship to junior engineers",
-        "Interface with clients and contractors on technical matters",
-        "Ensure design compliance with relevant codes and standards"
-      ]
-    },
-    {
-      id: 2,
-      title: "Structural Design Engineer",
-      department: "Engineering",
-      location: "Mumbai, India",
-      type: "Full-time",
-      description: "We are looking for a talented Structural Design Engineer to join our Mumbai office. The successful candidate will be involved in the design of various infrastructure projects including bridges, buildings, and specialized structures.",
-      requirements: [
-        "Bachelor's or Master's degree in Civil/Structural Engineering",
-        "4+ years of experience in structural design and analysis",
-        "Proficiency in structural analysis software (e.g., STAAD, ETABS, SAP2000)",
-        "Experience with reinforced concrete and steel design",
-        "Knowledge of relevant Indian and international design codes"
-      ],
-      responsibilities: [
-        "Develop structural designs for various infrastructure projects",
-        "Perform structural calculations and analysis",
-        "Prepare technical reports and design documentation",
-        "Collaborate with architectural and MEP teams",
-        "Participate in design reviews and quality assurance processes"
-      ]
-    },
-    {
-      id: 3,
-      title: "Transportation Engineer",
-      department: "Engineering",
-      location: "Bangalore, India",
-      type: "Full-time",
-      description: "We are seeking a Transportation Engineer to join our growing transportation infrastructure team. This role involves planning, designing, and analyzing transportation systems including highways, railways, and urban transit networks.",
-      requirements: [
-        "Bachelor's or Master's degree in Civil Engineering with specialization in Transportation",
-        "5+ years of experience in transportation planning and design",
-        "Proficiency in transportation modeling software",
-        "Experience with highway/railway design and traffic analysis",
-        "Knowledge of transportation planning principles and practices"
-      ],
-      responsibilities: [
-        "Design transportation infrastructure including roads, highways, and transit systems",
-        "Conduct traffic impact studies and analysis",
-        "Develop transportation master plans",
-        "Coordinate with urban planning and environmental teams",
-        "Ensure compliance with transportation regulations and standards"
-      ]
-    },
-    {
-      id: 4,
-      title: "BIM Specialist",
-      department: "Digital Engineering",
-      location: "Delhi/Mumbai/Bangalore (Hybrid)",
-      type: "Full-time",
-      description: "We are looking for a skilled BIM Specialist to enhance our digital engineering capabilities. This role involves implementing BIM processes, developing 3D models, and coordinating BIM integration across disciplines for complex infrastructure projects.",
-      requirements: [
-        "Bachelor's degree in Civil Engineering, Architecture, or related field",
-        "3+ years of experience in BIM implementation for infrastructure projects",
-        "Advanced proficiency in Revit, Civil 3D, and Navisworks",
-        "Experience with BIM coordination and clash detection",
-        "Knowledge of BIM standards and workflows"
-      ],
-      responsibilities: [
-        "Develop and maintain 3D BIM models for infrastructure projects",
-        "Coordinate BIM implementation across disciplines",
-        "Establish BIM protocols and standards",
-        "Provide BIM training and support to project teams",
-        "Generate visualizations and simulations for project presentations"
-      ]
-    },
-    {
-      id: 5,
-      title: "Environmental Engineer",
-      department: "Environmental",
-      location: "Delhi, India",
-      type: "Full-time",
-      description: "We are seeking an Environmental Engineer to support our commitment to sustainable infrastructure development. This role involves environmental impact assessments, sustainability analyses, and developing mitigation strategies for infrastructure projects.",
-      requirements: [
-        "Bachelor's or Master's degree in Environmental Engineering or related field",
-        "4+ years of experience in environmental consulting for infrastructure projects",
-        "Experience with environmental impact assessments and compliance",
-        "Knowledge of environmental regulations and permitting processes",
-        "Strong analytical and report writing skills"
-      ],
-      responsibilities: [
-        "Conduct environmental impact assessments for infrastructure projects",
-        "Develop environmental management and mitigation plans",
-        "Ensure regulatory compliance and permit acquisition",
-        "Integrate sustainable design principles into infrastructure projects",
-        "Coordinate with stakeholders on environmental matters"
-      ]
-    },
-    {
-      id: 6,
-      title: "Project Manager",
-      department: "Project Management",
-      location: "Mumbai, India",
-      type: "Full-time",
-      description: "We are looking for an experienced Project Manager to lead infrastructure project teams. This role involves overseeing project planning, execution, and delivery while ensuring client satisfaction, quality standards, and financial performance.",
-      requirements: [
-        "Bachelor's degree in Civil Engineering or related field",
-        "7+ years of experience in project management for infrastructure projects",
-        "PMP certification preferred",
-        "Strong leadership, communication, and client management skills",
-        "Experience with project management tools and methodologies"
-      ],
-      responsibilities: [
-        "Lead project teams from inception to completion",
-        "Develop and monitor project schedules, budgets, and resources",
-        "Manage client relationships and stakeholder communications",
-        "Identify and mitigate project risks",
-        "Ensure quality control and contract compliance"
-      ]
-    }
-  ];
+  // const openPositions = [
+  //   {
+  //     id: 1,
+  //     title: "Senior Tunnel Engineer",
+  //     department: "Engineering",
+  //     location: "Delhi, India",
+  //     type: "Full-time",
+  //     description: "We are seeking an experienced Senior Tunnel Engineer to join our expanding tunnel engineering team. This role involves leading the design and analysis of complex tunnel projects, providing technical guidance to junior engineers, and collaborating with multidisciplinary teams.",
+  //     requirements: [
+  //       "Master's degree in Civil Engineering with specialization in Tunnel/Geotechnical Engineering",
+  //       "8+ years of experience in tunnel design and construction",
+  //       "Proficiency in tunnel design software (e.g., PLAXIS, RS3, Phase2)",
+  //       "Experience with NATM and TBM tunneling methods",
+  //       "Strong analytical and problem-solving skills"
+  //     ],
+  //     responsibilities: [
+  //       "Lead the structural design of tunnel projects from concept to detailed design",
+  //       "Perform complex geotechnical and structural analyses for tunnel projects",
+  //       "Provide technical oversight and mentorship to junior engineers",
+  //       "Interface with clients and contractors on technical matters",
+  //       "Ensure design compliance with relevant codes and standards"
+  //     ]
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Structural Design Engineer",
+  //     department: "Engineering",
+  //     location: "Mumbai, India",
+  //     type: "Full-time",
+  //     description: "We are looking for a talented Structural Design Engineer to join our Mumbai office. The successful candidate will be involved in the design of various infrastructure projects including bridges, buildings, and specialized structures.",
+  //     requirements: [
+  //       "Bachelor's or Master's degree in Civil/Structural Engineering",
+  //       "4+ years of experience in structural design and analysis",
+  //       "Proficiency in structural analysis software (e.g., STAAD, ETABS, SAP2000)",
+  //       "Experience with reinforced concrete and steel design",
+  //       "Knowledge of relevant Indian and international design codes"
+  //     ],
+  //     responsibilities: [
+  //       "Develop structural designs for various infrastructure projects",
+  //       "Perform structural calculations and analysis",
+  //       "Prepare technical reports and design documentation",
+  //       "Collaborate with architectural and MEP teams",
+  //       "Participate in design reviews and quality assurance processes"
+  //     ]
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "Transportation Engineer",
+  //     department: "Engineering",
+  //     location: "Bangalore, India",
+  //     type: "Full-time",
+  //     description: "We are seeking a Transportation Engineer to join our growing transportation infrastructure team. This role involves planning, designing, and analyzing transportation systems including highways, railways, and urban transit networks.",
+  //     requirements: [
+  //       "Bachelor's or Master's degree in Civil Engineering with specialization in Transportation",
+  //       "5+ years of experience in transportation planning and design",
+  //       "Proficiency in transportation modeling software",
+  //       "Experience with highway/railway design and traffic analysis",
+  //       "Knowledge of transportation planning principles and practices"
+  //     ],
+  //     responsibilities: [
+  //       "Design transportation infrastructure including roads, highways, and transit systems",
+  //       "Conduct traffic impact studies and analysis",
+  //       "Develop transportation master plans",
+  //       "Coordinate with urban planning and environmental teams",
+  //       "Ensure compliance with transportation regulations and standards"
+  //     ]
+  //   },
+  //   {
+  //     id: 4,
+  //     title: "BIM Specialist",
+  //     department: "Digital Engineering",
+  //     location: "Delhi/Mumbai/Bangalore (Hybrid)",
+  //     type: "Full-time",
+  //     description: "We are looking for a skilled BIM Specialist to enhance our digital engineering capabilities. This role involves implementing BIM processes, developing 3D models, and coordinating BIM integration across disciplines for complex infrastructure projects.",
+  //     requirements: [
+  //       "Bachelor's degree in Civil Engineering, Architecture, or related field",
+  //       "3+ years of experience in BIM implementation for infrastructure projects",
+  //       "Advanced proficiency in Revit, Civil 3D, and Navisworks",
+  //       "Experience with BIM coordination and clash detection",
+  //       "Knowledge of BIM standards and workflows"
+  //     ],
+  //     responsibilities: [
+  //       "Develop and maintain 3D BIM models for infrastructure projects",
+  //       "Coordinate BIM implementation across disciplines",
+  //       "Establish BIM protocols and standards",
+  //       "Provide BIM training and support to project teams",
+  //       "Generate visualizations and simulations for project presentations"
+  //     ]
+  //   },
+  //   {
+  //     id: 5,
+  //     title: "Environmental Engineer",
+  //     department: "Environmental",
+  //     location: "Delhi, India",
+  //     type: "Full-time",
+  //     description: "We are seeking an Environmental Engineer to support our commitment to sustainable infrastructure development. This role involves environmental impact assessments, sustainability analyses, and developing mitigation strategies for infrastructure projects.",
+  //     requirements: [
+  //       "Bachelor's or Master's degree in Environmental Engineering or related field",
+  //       "4+ years of experience in environmental consulting for infrastructure projects",
+  //       "Experience with environmental impact assessments and compliance",
+  //       "Knowledge of environmental regulations and permitting processes",
+  //       "Strong analytical and report writing skills"
+  //     ],
+  //     responsibilities: [
+  //       "Conduct environmental impact assessments for infrastructure projects",
+  //       "Develop environmental management and mitigation plans",
+  //       "Ensure regulatory compliance and permit acquisition",
+  //       "Integrate sustainable design principles into infrastructure projects",
+  //       "Coordinate with stakeholders on environmental matters"
+  //     ]
+  //   },
+  //   {
+  //     id: 6,
+  //     title: "Project Manager",
+  //     department: "Project Management",
+  //     location: "Mumbai, India",
+  //     type: "Full-time",
+  //     description: "We are looking for an experienced Project Manager to lead infrastructure project teams. This role involves overseeing project planning, execution, and delivery while ensuring client satisfaction, quality standards, and financial performance.",
+  //     requirements: [
+  //       "Bachelor's degree in Civil Engineering or related field",
+  //       "7+ years of experience in project management for infrastructure projects",
+  //       "PMP certification preferred",
+  //       "Strong leadership, communication, and client management skills",
+  //       "Experience with project management tools and methodologies"
+  //     ],
+  //     responsibilities: [
+  //       "Lead project teams from inception to completion",
+  //       "Develop and monitor project schedules, budgets, and resources",
+  //       "Manage client relationships and stakeholder communications",
+  //       "Identify and mitigate project risks",
+  //       "Ensure quality control and contract compliance"
+  //     ]
+  //   }
+  // ];
 
   const benefits = [
     {
@@ -416,7 +416,7 @@ export default function Careers() {
         </section>
         
         {/* Current Openings */}
-        <section className="py-16 bg-neutral-50">
+        {/* <section className="py-16 bg-neutral-50">
           <Container>
             <SectionTitle
               title="Current Openings"
@@ -501,7 +501,7 @@ export default function Careers() {
               ))}
             </div>
           </Container>
-        </section>
+        </section> */}
         
         {/* Application Process */}
         <section className="py-16 bg-neutral-900 text-white">
