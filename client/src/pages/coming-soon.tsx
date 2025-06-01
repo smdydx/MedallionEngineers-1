@@ -4,7 +4,6 @@ import { Button } from "../components/ui/button";
 import { Mail, MessageCircle, Phone, MapPin, Calendar } from "lucide-react";
 import img from "../assets/demo.jpg";
 import heroVideo from "../assets/photo3.mp4";
-import headerImage from "../assets/header.jpg";
 
 const ComingSoon: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -26,29 +25,55 @@ const ComingSoon: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Simple Header */}
-      <motion.header
+      {/* Navigation Bar */}
+      <motion.nav
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="absolute top-0 left-0 right-0 z-20 bg-transparent px-6 py-4"
+        className="bg-white shadow-sm border-b border-gray-100 px-6 py-4"
       >
-        <div className="max-w-7xl mx-auto">
-          <div className="text-2xl font-bold text-white text-center">
-            Medallion Engineers Private Limited
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
+          <div className="flex items-center space-x-3">
+            <div className="text-xl font-bold text-gray-800">
+              Medallion Engineers Private Limited
+            </div>
+          </div>
+          <div className="flex items-center space-x-4">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={handleEmail}
+              className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors"
+            >
+              <Mail className="h-5 w-5" />
+              <span className="hidden sm:inline">Contact</span>
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={handleWhatsApp}
+              className="flex items-center space-x-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors"
+            >
+              <MessageCircle className="h-5 w-5" />
+              <span className="hidden sm:inline">WhatsApp</span>
+            </motion.button>
           </div>
         </div>
-      </motion.header>
+      </motion.nav>
 
-      {/* Hero Section with Header Image Background */}
+      {/* Hero Section with Video Background */}
       <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Header Image Background */}
+        {/* Video Background */}
         <div className="absolute inset-0 z-0">
-          <img
-            src={headerImage}
-            alt="Medallion Engineers"
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
             className="w-full h-full object-cover"
-          />
+          >
+            <source src={heroVideo} type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
 
