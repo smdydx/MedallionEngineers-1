@@ -5,6 +5,7 @@ import { Button } from "../components/ui/button";
 import { Mail, MessageCircle, MapPin, Calendar } from "lucide-react";
 import img from "../assets/demo.jpg";
 import heroVideo from "../assets/photo3.mp4";
+import headerImage from "../assets/header.jpg";
 
 const ComingSoon: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -190,6 +191,41 @@ const ComingSoon: React.FC = () => {
           </motion.div>
         </div>
       </div>
+
+      {/* Header Image Section */}
+      <section className="py-8 sm:py-12 lg:py-16 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-6 sm:mb-8"
+          >
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Engineering Excellence in Action
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+              Witness our commitment to precision and innovation
+            </p>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="relative overflow-hidden rounded-xl shadow-lg"
+          >
+            <img
+              src={headerImage}
+              alt="Medallion Engineers - Engineering Excellence"
+              className="w-full h-auto object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Key Services Section */}
       <div className="py-12 sm:py-16 lg:py-20 bg-white">
