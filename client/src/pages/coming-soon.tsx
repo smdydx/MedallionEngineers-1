@@ -4,7 +4,7 @@ import { Button } from "../components/ui/button";
 import { Mail, MessageCircle, MapPin, Calendar } from "lucide-react";
 import img from "../assets/demo.jpg";
 import heroVideo from "../assets/photo3.mp4";
-import headerImage from "../assets/FRR_ddddddchang-duong-Sj0iMtq_Z4w-unsplash.jpg";
+import headerImage from "../assets/header.jpg";
 
 const ComingSoon: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -202,7 +202,7 @@ const ComingSoon: React.FC = () => {
             <img
               src={headerImage}
               alt="Medallion Engineers - Engineering Excellence"
-              className="w-full h-64 sm:h-80 md:h-96 lg:h-[400px] xl:h-[500px] object-cover object-top sm:object-center"
+              className="w-full h-64 sm:h-80 md:h-96 lg:h-[400px] xl:h-[500px] object-cover object-right"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
           </motion.div>
