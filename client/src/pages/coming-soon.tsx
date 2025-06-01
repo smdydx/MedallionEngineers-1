@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "../components/ui/button";
-import img from "../assets/logo.jpg";
+import img from "../assets/demo.jpg";
 
 const ComingSoon: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -53,12 +53,12 @@ const ComingSoon: React.FC = () => {
             className="mb-8"
           >
             <h2 className="text-xl md:text-2xl text-blue-100 mb-6 font-semibold">
-              Coming Soon
+              Coming Soon.....
             </h2>
 
             <div className="text-left max-w-3xl mx-auto text-blue-100 space-y-4 text-sm md:text-base">
               <p>
-                Founded in 2010, Medallion Engineers Private Limited has
+                Founded in 2025, Medallion Engineers Private Limited has
                 established itself as a leading engineering consultancy firm in
                 India, specializing in infrastructure development, tunnel
                 engineering, and comprehensive project management solutions.
@@ -66,13 +66,13 @@ const ComingSoon: React.FC = () => {
 
               <p>
                 With our headquarters in Delhi and presence across major cities
-                in India, we have successfully delivered over 200 projects
-                across various sectors including transportation, urban
-                development, water infrastructure, and industrial facilities.
+                in India, we are delivering projects across various sectors
+                including transportation, urban development, water
+                infrastructure, and industrial facilities.
               </p>
 
               <p>
-                Our team of over 50 highly qualified engineers and specialists
+                Our team of over 20 highly qualified engineers and specialists
                 brings together expertise in structural engineering,
                 geotechnical engineering, project management, and systems
                 integration to provide holistic solutions to complex engineering
