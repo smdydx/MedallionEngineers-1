@@ -25,16 +25,16 @@ const ComingSoon: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation Bar */}
-      <motion.nav
+      {/* Header Section */}
+      <motion.header
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="bg-white shadow-sm border-b border-gray-100 px-6 py-4"
+        className="bg-red-600 shadow-lg border-b border-red-700 px-6 py-6"
       >
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-3">
-            <div className="text-xl font-bold text-gray-800">
+            <div className="text-xl font-bold text-white">
               Medallion Engineers Private Limited
             </div>
           </div>
@@ -43,7 +43,7 @@ const ComingSoon: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleEmail}
-              className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors"
+              className="flex items-center space-x-2 text-white hover:text-red-200 transition-colors"
             >
               <Mail className="h-5 w-5" />
               <span className="hidden sm:inline">Contact</span>
@@ -52,14 +52,14 @@ const ComingSoon: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleWhatsApp}
-              className="flex items-center space-x-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors"
+              className="flex items-center space-x-2 bg-white text-red-600 px-4 py-2 rounded-lg hover:bg-red-50 transition-colors"
             >
               <MessageCircle className="h-5 w-5" />
               <span className="hidden sm:inline">WhatsApp</span>
             </motion.button>
           </div>
         </div>
-      </motion.nav>
+      </motion.header>
 
       {/* Hero Section with Video Background */}
       <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
