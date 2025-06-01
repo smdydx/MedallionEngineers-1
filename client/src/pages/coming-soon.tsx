@@ -4,7 +4,7 @@ import { Button } from "../components/ui/button";
 import { Mail, MessageCircle, MapPin, Calendar } from "lucide-react";
 import img from "../assets/demo.jpg";
 import heroVideo from "../assets/photo3.mp4";
-import headerImage from "../assets/header.jpg";
+import headerImage from "../assets/FRR_ddddddchang-duong-Sj0iMtq_Z4w-unsplash.jpg";
 
 const ComingSoon: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
