@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "../components/ui/button";
@@ -138,24 +137,7 @@ const ComingSoon: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
               className="hidden sm:grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto mt-8 sm:mt-12"
-            >
-              <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold mb-2">100+</div>
-                <div className="text-blue-100 text-sm sm:text-base">Projects Completed</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold mb-2">20+</div>
-                <div className="text-blue-100 text-sm sm:text-base">Expert Engineers</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold mb-2">15+</div>
-                <div className="text-blue-100 text-sm sm:text-base">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold mb-2">5+</div>
-                <div className="text-blue-100 text-sm sm:text-base">Cities</div>
-              </div>
-            </motion.div>
+            ></motion.div>
 
             {/* Action Buttons */}
             <motion.div
@@ -209,7 +191,7 @@ const ComingSoon: React.FC = () => {
               Witness our commitment to precision and innovation
             </p>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -327,9 +309,15 @@ const ComingSoon: React.FC = () => {
               <div className="bg-blue-100 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
                 <Mail className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600" />
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Email Us</h3>
-              <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">info@medallionindia.com</p>
-              <div className="text-blue-600 font-medium text-sm sm:text-base">Send Message →</div>
+              <h3 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">
+                Email Us
+              </h3>
+              <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">
+                info@medallionindia.com
+              </p>
+              <div className="text-blue-600 font-medium text-sm sm:text-base">
+                Send Message →
+              </div>
             </motion.div>
 
             <motion.div
@@ -340,9 +328,15 @@ const ComingSoon: React.FC = () => {
               <div className="bg-green-100 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
                 <MessageCircle className="h-6 w-6 sm:h-8 sm:w-8 text-green-600" />
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">WhatsApp</h3>
-              <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">+91-99343 20355</p>
-              <div className="text-green-600 font-medium text-sm sm:text-base">Chat Now →</div>
+              <h3 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">
+                WhatsApp
+              </h3>
+              <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">
+                +91-99343 20355
+              </p>
+              <div className="text-green-600 font-medium text-sm sm:text-base">
+                Chat Now →
+              </div>
             </motion.div>
 
             <motion.div
@@ -352,9 +346,15 @@ const ComingSoon: React.FC = () => {
               <div className="bg-purple-100 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
                 <MapPin className="h-6 w-6 sm:h-8 sm:w-8 text-purple-600" />
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">Visit Us</h3>
-              <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">New Delhi, India</p>
-              <div className="text-purple-600 font-medium text-sm sm:text-base">View Location →</div>
+              <h3 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">
+                Visit Us
+              </h3>
+              <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">
+                New Delhi, India
+              </p>
+              <div className="text-purple-600 font-medium text-sm sm:text-base">
+                View Location →
+              </div>
             </motion.div>
           </div>
         </div>
