@@ -70,7 +70,7 @@ const ComingSoon: React.FC = () => {
               <img
                 src={img}
                 alt="Medallion Engineers Private Limited"
-                className="mx-auto h-20 sm:h-24 md:h-32 lg:h-40 w-auto"
+                className="mx-auto h-32 sm:h-36 md:h-40 lg:h-48 w-auto"
               />
             </motion.div>
 
@@ -100,7 +100,7 @@ const ComingSoon: React.FC = () => {
               transition={{ delay: 0.5, duration: 0.6 }}
               className="max-w-4xl mx-auto space-y-4 sm:space-y-6 px-2"
             >
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 leading-relaxed font-bold">
                 Leading engineering consultancy firm specializing in
                 infrastructure development, tunnel engineering, and
                 comprehensive project management solutions.
@@ -202,7 +202,7 @@ const ComingSoon: React.FC = () => {
             <img
               src={headerImage}
               alt="Medallion Engineers - Engineering Excellence"
-              className="w-full h-48 sm:h-64 md:h-80 lg:h-96 xl:h-auto object-cover object-center"
+              className="w-full h-56 sm:h-72 md:h-80 lg:h-96 xl:h-[500px] object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
           </motion.div>
