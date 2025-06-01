@@ -25,7 +25,7 @@ import TunnelStructures from './pages/tunnel-structures';
 import Experts from './pages/experts';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Toaster } from './components/ui/toaster';
-import CookieConsent from './components/CookieConsent';
+import { CookieConsent } from './components/CookieConsent';
 
 const queryClient = new QueryClient();
 
