@@ -175,19 +175,19 @@ const ComingSoon: React.FC = () => {
       </div>
 
       {/* Header Image Section */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-6 sm:py-8 md:py-12 lg:py-16 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-6 sm:mb-8"
+            className="text-center mb-4 sm:mb-6 md:mb-8"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4 px-2">
               Engineering Excellence in Action
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Witness our commitment to precision and innovation
             </p>
           </motion.div>
@@ -197,12 +197,12 @@ const ComingSoon: React.FC = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="relative overflow-hidden rounded-xl shadow-lg"
+            className="relative overflow-hidden rounded-lg sm:rounded-xl shadow-lg"
           >
             <img
               src={headerImage}
               alt="Medallion Engineers - Engineering Excellence"
-              className="w-full h-auto object-cover"
+              className="w-full h-48 sm:h-64 md:h-80 lg:h-96 xl:h-auto object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
           </motion.div>
