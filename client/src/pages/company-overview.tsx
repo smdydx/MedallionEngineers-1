@@ -10,7 +10,7 @@ export default function CompanyOverview() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      
+
       <main className="flex-grow">
         {/* Hero Banner */}
         <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
@@ -22,7 +22,7 @@ export default function CompanyOverview() {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-secondary/60"></div>
           </div>
-          
+
           <Container className="relative z-10 h-full flex flex-col justify-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -37,7 +37,7 @@ export default function CompanyOverview() {
             </motion.div>
           </Container>
         </div>
-        
+
         {/* Breadcrumbs */}
         <div className="bg-neutral-100 py-3 border-b border-neutral-200">
           <Container>
@@ -50,7 +50,7 @@ export default function CompanyOverview() {
             </div>
           </Container>
         </div>
-        
+
         {/* Introduction */}
         <section className="py-16 bg-white">
           <Container>
@@ -92,7 +92,7 @@ export default function CompanyOverview() {
                   </div>
                 </div>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -108,7 +108,7 @@ export default function CompanyOverview() {
             </div>
           </Container>
         </section>
-        
+
         {/* Leadership */}
         <section className="py-16 bg-neutral-50">
           <Container>
@@ -117,7 +117,7 @@ export default function CompanyOverview() {
               subtitle="The visionaries driving Medallion Engineers forward"
               align="center"
             />
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               {[
                 {
@@ -190,7 +190,7 @@ export default function CompanyOverview() {
                 </motion.div>
               ))}
             </div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -208,7 +208,7 @@ export default function CompanyOverview() {
             </motion.div>
           </Container>
         </section>
-        
+
         {/* Why Choose Us */}
         <section className="py-16 bg-white">
           <Container>
@@ -225,7 +225,7 @@ export default function CompanyOverview() {
                   className="rounded-lg shadow-lg w-full h-auto"
                 />
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -238,7 +238,7 @@ export default function CompanyOverview() {
                   We bring together world-class expertise, local knowledge, and a passion for engineering 
                   to deliver exceptional results on every project.
                 </p>
-                
+
                 <div className="space-y-4">
                   {[
                     {
@@ -262,22 +262,33 @@ export default function CompanyOverview() {
                       description: "We integrate sustainability principles into all our projects, ensuring environmentally responsible and future-proof solutions."
                     }
                   ].map((point, index) => (
-                    <div key={index} className="flex items-start">
-                      <div className="bg-primary/10 p-2 rounded-full mr-4 mt-1">
+                    <motion.div 
+                      className="flex items-start"
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: 0.1 * index }}
+                      viewport={{ once: true }}
+                      whileHover={{ x: 5 }}
+                    >
+                      <motion.div 
+                        className="bg-primary/10 p-2 rounded-full mr-4 mt-1"
+                        whileHover={{ scale: 1.1, backgroundColor: "rgb(29 94 168 / 0.2)" }}
+                        transition={{ duration: 0.2 }}
+                      >
                         <Check className="h-5 w-5 text-primary" />
-                      </div>
+                      </motion.div>
                       <div>
                         <h3 className="font-bold text-primary mb-1">{point.title}</h3>
                         <p className="text-neutral-700 text-sm">{point.description}</p>
                       </div>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </motion.div>
             </div>
           </Container>
         </section>
-        
+
         {/* Our Approach */}
         <section className="py-16 bg-neutral-900 text-white">
           <Container>
@@ -294,7 +305,7 @@ export default function CompanyOverview() {
                 of every project, from initial concept to final implementation.
               </p>
             </motion.div>
-            
+
             <div className="grid md:grid-cols-4 gap-6">
               {[
                 {
@@ -359,7 +370,7 @@ export default function CompanyOverview() {
             </div>
           </Container>
         </section>
-        
+
         {/* Certifications */}
         <section className="py-16 bg-white">
           <Container>
@@ -368,7 +379,7 @@ export default function CompanyOverview() {
               subtitle="Meeting the highest standards of quality and excellence"
               align="center"
             />
-            
+
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               {[
                 {
@@ -376,7 +387,7 @@ export default function CompanyOverview() {
                   description: "Quality Management System certification, demonstrating our commitment to consistent quality and client satisfaction.",
                   icon: (
                     <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                   )
                 },
@@ -394,7 +405,7 @@ export default function CompanyOverview() {
                   description: "Occupational Health and Safety Management certification, ensuring the highest standards for workplace safety.",
                   icon: (
                     <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                   )
                 }
@@ -415,7 +426,7 @@ export default function CompanyOverview() {
                 </motion.div>
               ))}
             </div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -434,7 +445,7 @@ export default function CompanyOverview() {
             </motion.div>
           </Container>
         </section>
-        
+
         {/* Learn More About Us */}
         <section className="py-16 bg-neutral-50">
           <Container>
@@ -443,7 +454,7 @@ export default function CompanyOverview() {
               subtitle="Explore our company values, mission, and journey"
               align="center"
             />
-            
+
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               {[
                 {
@@ -496,10 +507,10 @@ export default function CompanyOverview() {
             </div>
           </Container>
         </section>
-        
+
         <CTASection />
       </main>
-      
+
       <Footer />
     </div>
   );
