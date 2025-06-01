@@ -93,6 +93,7 @@ const ComingSoon: React.FC = () => {
               className="mb-8"
             >
               <img
+                src={img}
                 alt="Medallion Engineers Private Limited"
                 className="mx-auto h-32 md:h-40 w-auto"
               />
