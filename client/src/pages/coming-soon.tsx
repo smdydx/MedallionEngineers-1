@@ -202,7 +202,7 @@ const ComingSoon: React.FC = () => {
             <img
               src={headerImage}
               alt="Medallion Engineers - Engineering Excellence"
-              className="w-full h-64 sm:h-80 md:h-96 lg:h-[400px] xl:h-[500px] object-cover object-right"
+              className="w-full h-72 sm:h-80 md:h-96 lg:h-[400px] xl:h-[500px] object-cover object-left-top"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
           </motion.div>
