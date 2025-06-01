@@ -4,6 +4,7 @@ import { Button } from "../components/ui/button";
 import { Mail, MessageCircle, Phone, MapPin, Calendar } from "lucide-react";
 import img from "../assets/demo.jpg";
 import heroVideo from "../assets/photo3.mp4";
+import headerImage from "../assets/header.jpg";
 
 const ComingSoon: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -61,19 +62,15 @@ const ComingSoon: React.FC = () => {
         </div>
       </motion.nav>
 
-      {/* Hero Section with Video Background */}
+      {/* Hero Section with Header Image Background */}
       <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Video Background */}
+        {/* Header Image Background */}
         <div className="absolute inset-0 z-0">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
+          <img
+            src={headerImage}
+            alt="Header Background"
             className="w-full h-full object-cover"
-          >
-            <source src={heroVideo} type="video/mp4" />
-          </video>
+          />
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
 
