@@ -230,53 +230,92 @@ const ComingSoon: React.FC = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {[
-              {
-                title: "Infrastructure Development",
-                description:
-                  "Complex engineering solutions for transportation, urban development, and industrial facilities with focus on sustainability and innovation.",
-              },
-              {
-                title: "Construction Equipment",
-                description:
-                  "State-of-the-art construction equipment and machinery for efficient project execution, including tunneling, excavation, and heavy lifting.",
-              },
-              {
-                title: "Tunnel Engineering",
-                description:
-                  "Specialized expertise in underground construction, tunnel systems, and subsurface infrastructure with advanced technology.",
-              },
-              {
-                title: "Project Management",
-                description:
-                  "End-to-end project delivery with quality assurance, timeline management, and comprehensive oversight across all phases.",
-              },
-              {
-                title: "Mining and Geotechnical",
-                description:
-                  "Expertise in mining operations, geotechnical investigations, and subsurface analysis to ensure safety and efficiency.",
-              },
-              {
-                title: "Financial Services",
-                description:
-                  "Financial consulting and investment advisory services tailored for engineering projects, ensuring optimal resource allocation and risk management.",
-              },
-            ].map((service, index) => (
+                {
+                  title: "Infrastructure Development",
+                  description: "Comprehensive infrastructure solutions for sustainable urban and regional development projects.",
+                  image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+                  icon: (
+                    <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  )
+                },
+                {
+                  title: "Tunnel Engineering",
+                  description: "Advanced tunneling solutions for transportation and utility infrastructure projects.",
+                  image: "https://images.unsplash.com/photo-1596265371388-43edbaadab94?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+                  icon: (
+                    <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  )
+                },
+                {
+                  title: "Project Management",
+                  description: "End-to-end project management services ensuring efficient coordination and timely delivery.",
+                  image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+                  icon: (
+                    <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2zm8 0h-2a2 2 0 00-2 2v6a2 2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2z" />
+                    </svg>
+                  )
+                },
+                {
+                  title: "Construction Equipment",
+                  description: "Modern construction equipment and machinery solutions for enhanced project efficiency.",
+                  image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+                  icon: (
+                    <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  )
+                },
+                {
+                  title: "Mining & Geotechnical",
+                  description: "Specialized expertise in mining engineering and geotechnical analysis for challenging projects.",
+                  image: "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+                  icon: (
+                    <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  )
+                },
+                {
+                  title: "Financial Services",
+                  description: "Comprehensive financial solutions and advisory services for infrastructure projects.",
+                  image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+                  icon: (
+                    <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  )
+                }
+              ].map((service, index) => (
               <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 p-6 sm:p-8 rounded-xl border border-gray-100 text-center hover:shadow-lg transition-shadow duration-300"
-              >
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4"></div>
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
-                  {service.description}
-                </p>
-              </motion.div>
+                  key={service.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  className="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300"
+                >
+                  <div className="relative h-40 overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div className="absolute bottom-4 left-4">
+                      <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
+                        {service.icon}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+                  </div>
+                </motion.div>
             ))}
           </div>
         </div>
