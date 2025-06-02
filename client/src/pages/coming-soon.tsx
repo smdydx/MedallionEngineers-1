@@ -343,24 +343,10 @@ const ComingSoon: React.FC = () => {
 
           {/* Bottom Bar */}
           <div className="mt-12 pt-8 border-t border-gray-700">
-            <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+            <div className="flex flex-col sm:flex-row justify-center items-center">
               <p className="text-gray-400 text-sm">
                 © 2025 Medallion Engineers Private Limited. All rights reserved.
               </p>
-              <div className="flex space-x-6">
-                <button
-                  onClick={handleEmail}
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  <Mail className="h-5 w-5" />
-                </button>
-                <button
-                  onClick={handleWhatsApp}
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  <MessageCircle className="h-5 w-5" />
-                </button>
-              </div>
             </div>
           </div>
         </div>
