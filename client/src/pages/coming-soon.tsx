@@ -1,19 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "../components/ui/button";
 import { Mail, MessageCircle, MapPin, Calendar } from "lucide-react";
 import img from "../assets/demo.jpg";
 import heroVideo from "../assets/photo3.mp4";
 import headerImage from "../assets/header.jpg";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "../components/ui/dialog";
+import { AlertTriangle } from "lucide-react";
 
 const ComingSoon: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const [showPermissionDialog, setShowPermissionDialog] = useState(false);
 
   const handleLaunch = () => {
-    setIsLoading(true);
-    setTimeout(() => {
-      window.location.href = "/home";
-    }, 2000);
+    setShowPermissionDialog(true);
   };
 
   const handleWhatsApp = () => {
@@ -422,6 +422,49 @@ const ComingSoon: React.FC = () => {
           </div>
         </motion.button>
       </div>
+
+      {/* Permission Dialog */}
+      <Dialog open={showPermissionDialog} onOpenChange={setShowPermissionDialog}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <div className="flex items-center space-x-2">
+              <AlertTriangle className="h-6 w-6 text-amber-500" />
+              <DialogTitle>Launch Permission Required</DialogTitle>
+            </div>
+            <DialogDescription className="text-left space-y-3 mt-4">
+              <p>
+                The website launch feature is currently under development and not yet available.
+              </p>
+              <p>
+                <strong>Permission Status:</strong> Not Guaranteed
+              </p>
+              <p className="text-sm text-gray-600">
+                We are working hard to bring you the full website experience. 
+                Please check back soon or contact us for updates.
+              </p>
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex flex-col space-y-2 mt-6">
+            <Button 
+              onClick={() => setShowPermissionDialog(false)}
+              className="w-full"
+            >
+              I Understand
+            </Button>
+            <Button 
+              variant="outline" 
+              onClick={() => {
+                setShowPermissionDialog(false);
+                // This is where you'll later connect to Home page
+                // window.location.href = '/home';
+              }}
+              className="w-full text-sm"
+            >
+              Notify Me When Ready
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
