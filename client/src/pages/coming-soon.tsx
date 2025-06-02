@@ -365,6 +365,43 @@ const ComingSoon: React.FC = () => {
           </div>
         </div>
       </footer>
+
+      {/* Floating Contact Icons */}
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col space-y-3">
+        {/* WhatsApp Icon */}
+        <motion.button
+          onClick={handleWhatsApp}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 1, duration: 0.3 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 group"
+          aria-label="Contact us on WhatsApp"
+        >
+          <MessageCircle className="h-6 w-6" />
+          <div className="absolute right-full mr-3 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-3 py-1 rounded-md text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            WhatsApp
+          </div>
+        </motion.button>
+
+        {/* Email Icon */}
+        <motion.button
+          onClick={handleEmail}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 1.2, duration: 0.3 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 group"
+          aria-label="Send us an email"
+        >
+          <Mail className="h-6 w-6" />
+          <div className="absolute right-full mr-3 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white px-3 py-1 rounded-md text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            Email
+          </div>
+        </motion.button>
+      </div>
     </div>
   );
 };
