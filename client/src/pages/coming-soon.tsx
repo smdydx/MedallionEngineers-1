@@ -253,12 +253,7 @@ const ComingSoon: React.FC = () => {
                 {
                   title: "Project Management",
                   description: "End-to-end project management services ensuring efficient coordination and timely delivery.",
-                  image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-                  icon: (
-                    <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2zm8 0h-2a2 2 0 00-2 2v6a2 2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2z" />
-                    </svg>
-                  )
+                  image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
                 },
                 {
                   title: "Construction Equipment",
