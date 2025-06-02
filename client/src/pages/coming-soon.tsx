@@ -282,83 +282,101 @@ const ComingSoon: React.FC = () => {
         </div>
       </div>
 
-      {/* Contact Section */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.8, duration: 0.6 }}
-        className="bg-gray-50 py-12 sm:py-16"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
-              Get in Touch
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto px-4 text-sm sm:text-base">
-              Ready to discuss your engineering project? Contact our team for
-              consultation and support.
-            </p>
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Company Info */}
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <img
+                  src={img}
+                  alt="Medallion Engineers"
+                  className="h-10 w-auto"
+                />
+                <h3 className="text-lg font-bold">Medallion Engineers Pvt. Ltd.</h3>
+              </div>
+              <p className="text-gray-300 text-sm">
+                Leading engineering consultancy firm specializing in infrastructure development, tunnel engineering, and comprehensive project management solutions.
+              </p>
+            </div>
+
+            {/* Contact Info */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-bold">Contact Information</h3>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <Mail className="h-5 w-5 text-blue-400" />
+                  <span className="text-gray-300 text-sm">info@medallionindia.com</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <MessageCircle className="h-5 w-5 text-green-400" />
+                  <span className="text-gray-300 text-sm">+91-99343 20355</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <MapPin className="h-5 w-5 text-purple-400" />
+                  <span className="text-gray-300 text-sm">New Delhi, India</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Services */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-bold">Our Services</h3>
+              <ul className="space-y-2 text-sm text-gray-300">
+                <li>Infrastructure Development</li>
+                <li>Tunnel Engineering</li>
+                <li>Project Management</li>
+                <li>Construction Equipment</li>
+                <li>Mining & Geotechnical</li>
+                <li>Financial Services</li>
+              </ul>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            <motion.div
-              whileHover={{ y: -5 }}
-              className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100 text-center cursor-pointer"
-              onClick={handleEmail}
-            >
-              <div className="bg-blue-100 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                <Mail className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600" />
+          {/* Map Section */}
+          <div className="mt-12">
+            <h3 className="text-lg font-bold mb-6 text-center">Our Location</h3>
+            <div className="bg-gray-800 rounded-lg p-6 text-center">
+              <div className="flex items-center justify-center space-x-2 mb-4">
+                <MapPin className="h-6 w-6 text-blue-400" />
+                <span className="text-lg font-semibold">New Delhi Office</span>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">
-                Email Us
-              </h3>
-              <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">
-                info@medallionindia.com
-              </p>
-              <div className="text-blue-600 font-medium text-sm sm:text-base">
-                Send Message →
-              </div>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ y: -5 }}
-              className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100 text-center cursor-pointer"
-              onClick={handleWhatsApp}
-            >
-              <div className="bg-green-100 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                <MessageCircle className="h-6 w-6 sm:h-8 sm:w-8 text-green-600" />
-              </div>
-              <h3 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">
-                WhatsApp
-              </h3>
-              <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">
-                +91-99343 20355
-              </p>
-              <div className="text-green-600 font-medium text-sm sm:text-base">
-                Chat Now →
-              </div>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ y: -5 }}
-              className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100 text-center sm:col-span-2 lg:col-span-1"
-            >
-              <div className="bg-purple-100 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                <MapPin className="h-6 w-6 sm:h-8 sm:w-8 text-purple-600" />
-              </div>
-              <h3 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">
-                Visit Us
-              </h3>
-              <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">
+              <p className="text-gray-300 mb-4">
+                Medallion Engineers Private Limited<br />
                 New Delhi, India
               </p>
-              <div className="text-purple-600 font-medium text-sm sm:text-base">
-                View Location →
+              <div className="bg-gray-700 rounded-lg p-8 border-2 border-dashed border-gray-600">
+                <MapPin className="h-12 w-12 text-gray-500 mx-auto mb-2" />
+                <p className="text-gray-500 text-sm">Interactive Map Coming Soon</p>
               </div>
-            </motion.div>
+            </div>
+          </div>
+
+          {/* Bottom Bar */}
+          <div className="mt-12 pt-8 border-t border-gray-700">
+            <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+              <p className="text-gray-400 text-sm">
+                © 2025 Medallion Engineers Private Limited. All rights reserved.
+              </p>
+              <div className="flex space-x-6">
+                <button
+                  onClick={handleEmail}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  <Mail className="h-5 w-5" />
+                </button>
+                <button
+                  onClick={handleWhatsApp}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  <MessageCircle className="h-5 w-5" />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-      </motion.section>
+      </footer>
     </div>
   );
 };
