@@ -103,12 +103,21 @@ const ComingSoon: React.FC = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="mb-6 sm:mb-8"
+              className="mb-6 sm:mb-8 flex justify-center"
             >
               <img
                 src={img}
                 alt="Medallion Engineers Private Limited"
-                className="mx-auto h-32 sm:h-36 md:h-40 lg:h-48 w-auto"
+                className="h-24 sm:h-28 md:h-32 lg:h-36 xl:h-40 w-auto max-w-full object-contain"
+                style={{
+                  maxHeight: "10rem",
+                  filter: "brightness(1.1) contrast(1.1)",
+                }}
+                loading="eager"
+                onError={(e) => {
+                  console.error("Logo failed to load:", e);
+                  e.currentTarget.style.display = 'none';
+                }}
               />
             </motion.div>
 
@@ -139,25 +148,25 @@ const ComingSoon: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold leading-tight px-2"
+              className="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight px-2 text-center"
             >
               Medallion Engineers
-              <span className="block text-blue-300">Private Limited</span>
+              <span className="block text-blue-300 mt-1">Private Limited</span>
             </motion.h1>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.6 }}
-              className="max-w-4xl mx-auto space-y-4 sm:space-y-6 px-2"
+              className="max-w-5xl mx-auto space-y-4 sm:space-y-6 px-4 sm:px-6"
             >
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 leading-relaxed font-bold">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-blue-100 leading-relaxed font-semibold text-center">
                 Leading engineering consultancy firm specializing in
                 infrastructure development, tunnel engineering, and
                 comprehensive project management solutions.
               </p>
 
-              <div className="text-left max-w-4xl mx-auto text-gray-200 space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg leading-relaxed">
+              <div className="text-center max-w-4xl mx-auto text-gray-200 space-y-3 sm:space-y-4 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed">
                 <p>
                   Medallion Engineers Private Limited has established itself as
                   a leading engineering consultancy firm in India, specializing
@@ -172,7 +181,7 @@ const ComingSoon: React.FC = () => {
                   infrastructure, and industrial facilities.
                 </p>
 
-                <p className="hidden md:block">
+                <p className="hidden lg:block">
                   Our team of over 20 highly qualified engineers and specialists
                   brings together expertise in structural engineering,
                   geotechnical engineering, project management, and systems
@@ -195,16 +204,16 @@ const ComingSoon: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mt-8 sm:mt-12 px-4"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mt-6 sm:mt-8 lg:mt-10 px-4 max-w-lg mx-auto"
             >
               <Button
                 onClick={handleLaunch}
                 disabled={isLoading}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
               >
                 {isLoading ? (
                   <div className="flex items-center justify-center">
-                    <div className="animate-spin rounded-full h-4 w-4 sm:h-5 sm:w-5 border-b-2 border-white mr-2"></div>
+                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
                     Loading...
                   </div>
                 ) : (
@@ -215,9 +224,9 @@ const ComingSoon: React.FC = () => {
               <Button
                 onClick={handleEmail}
                 variant="outline"
-                className="border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl transition-all duration-300 w-full sm:w-auto"
+                className="border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold rounded-xl transition-all duration-300 w-full sm:w-auto"
               >
-                <Mail className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+                <Mail className="mr-2 h-3 w-3 sm:h-4 sm:w-4 lg:h-5 lg:w-5" />
                 Get in Touch
               </Button>
             </motion.div>
