@@ -9,6 +9,7 @@ import infraImage from "../assets/Eng.jpg";
 import tunnelImage from "../assets/T.jpg";
 import projectMgmtImage from "../assets/IS.jpg";
 import equipmentImage from "../assets/eqiment.jpg";
+import miningImage from "../assets/mining.jpg";
 import {
   Dialog,
   DialogContent,
@@ -284,8 +285,7 @@ const ComingSoon: React.FC = () => {
                 title: "Mining & Geotechnical",
                 description:
                   "Specialized expertise in mining engineering and geotechnical analysis for challenging projects.",
-                image:
-                  "",
+                image: miningImage,
                 icon: (
                   <svg
                     className="w-10 h-10 text-primary"
