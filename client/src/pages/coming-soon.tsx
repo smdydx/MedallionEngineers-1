@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Button } from "../components/ui/button";
-import { Mail, MessageCircle, MapPin, Calendar } from "lucide-react";
+import { Mail, MessageCircle, MapPin, Calendar, Play, Pause } from "lucide-react";
 import img from "../assets/demo.jpg";
 import heroVideo from "../assets/photo3.mp4";
 import headerImage from "../assets/header.jpg";
@@ -25,6 +25,8 @@ const ComingSoon: React.FC = () => {
   const [showPermissionDialog, setShowPermissionDialog] = useState(false);
   const [showPrivacyDialog, setShowPrivacyDialog] = useState(false);
   const [showCopyrightDialog, setShowCopyrightDialog] = useState(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleLaunch = () => {
     setShowPermissionDialog(true);
@@ -36,6 +38,18 @@ const ComingSoon: React.FC = () => {
 
   const handleEmail = () => {
     window.location.href = "mailto:info@medallionindia.com";
+  };
+
+  const toggleVideoPlay = () => {
+    if (videoRef.current) {
+      if (isVideoPlaying) {
+        videoRef.current.pause();
+        setIsVideoPlaying(false);
+      } else {
+        videoRef.current.play();
+        setIsVideoPlaying(true);
+      }
+    }
   };
 
   // Set body padding and margin to 0
@@ -55,11 +69,14 @@ const ComingSoon: React.FC = () => {
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
           <video
+            ref={videoRef}
             autoPlay
             muted
             loop
             playsInline
             className="w-full h-full object-cover"
+            onPlay={() => setIsVideoPlaying(true)}
+            onPause={() => setIsVideoPlaying(false)}
           >
             <source src={heroVideo} type="video/mp4" />
           </video>
@@ -92,10 +109,23 @@ const ComingSoon: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="inline-block bg-blue-600/20 backdrop-blur-sm text-blue-100 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-lg md:text-xl font-medium border border-blue-400/30"
+              className="inline-flex items-center bg-blue-600/20 backdrop-blur-sm text-blue-100 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-lg md:text-xl font-medium border border-blue-400/30"
             >
               <Calendar className="inline h-4 w-4 sm:h-6 sm:w-6 md:h-8 md:w-6 mr-2" />
               Coming Soon....
+              <motion.button
+                onClick={toggleVideoPlay}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                className="ml-3 p-1 sm:p-2 bg-white/20 hover:bg-white/30 rounded-full transition-all duration-300"
+                aria-label={isVideoPlaying ? "Pause video" : "Play video"}
+              >
+                {isVideoPlaying ? (
+                  <Pause className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5" />
+                ) : (
+                  <Play className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 ml-0.5" />
+                )}
+              </motion.button>
             </motion.div>
 
             <motion.h1
