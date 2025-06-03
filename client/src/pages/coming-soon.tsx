@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "../components/ui/button";
 import {
@@ -59,8 +59,7 @@ const ComingSoon: React.FC = () => {
     }
   };
 
-  // Set body padding and margin to 0
-  React.useEffect(() => {
+  useEffect(() => {
     document.body.style.padding = "0";
     document.body.style.margin = "0";
     return () => {
@@ -71,6 +70,22 @@ const ComingSoon: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white p-0 m-0">
+      {/* Mobile Logo (fixed only on mobile) */}
+      <div className="block sm:hidden fixed top-0 left-0 w-full z-30 bg-transparent pt-4 pb-2 flex justify-center">
+        <img
+          src={img}
+          alt="Medallion Engineers Private Limited"
+          className="h-32 w-auto max-w-[95%] object-contain xs:h-36"
+          style={{
+            filter: "brightness(1.2) contrast(1.1) drop-shadow(0 4px 8px rgba(0,0,0,0.3))",
+          }}
+          loading="eager"
+          onError={(e) => {
+            console.error("Logo failed to load:", e);
+            (e.target as HTMLImageElement).style.display = 'none';
+          }}
+        />
+      </div>
       {/* Hero Section with Video Background */}
       <div className="relative min-h-screen flex items-center justify-center overflow-hidden p-0 m-0">
         {/* Video Background */}
@@ -89,175 +104,139 @@ const ComingSoon: React.FC = () => {
           </video>
           <div className="absolute inset-0 bg-black/60 sm:bg-black/50 md:bg-black/40"></div>
         </div>
-
         {/* Hero Content */}
-        <div className="relative z-10 w-full min-h-screen flex items-center justify-center px-3 pt-2 pb-6 sm:px-4 sm:pt-4 sm:pb-8 md:px-6 lg:px-8">
-          <div className="w-full max-w-7xl mx-auto text-center text-white">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-12 sm:pb-20 text-center text-white w-full">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-6 sm:space-y-8"
+          >
+            {/* Company Logo Desktop/Tablet */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="hidden sm:block mb-6 sm:mb-8"
             >
-              {/* Company Logo */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-                className="mb-3 sm:mb-4 md:mb-6 lg:mb-8 flex justify-center px-2"
-              >
-                <img
-                  src={img}
-                  alt="Medallion Engineers Private Limited"
-                  className="h-24 w-auto max-w-[95%] object-contain 
-                           xs:h-28 
-                           sm:h-32 sm:max-w-[85%] 
-                           md:h-36 md:max-w-[75%] 
-                           lg:h-40 lg:max-w-[65%] 
-                           xl:h-44 xl:max-w-[55%] 
-                           2xl:h-48"
-                  style={{
-                    filter: "brightness(1.2) contrast(1.1) drop-shadow(0 4px 8px rgba(0,0,0,0.3))",
-                  }}
-                  loading="eager"
-                  onError={(e) => {
-                    console.error("Logo failed to load:", e);
-                    e.currentTarget.style.display = 'none';
-                  }}
-                />
-              </motion.div>
+              <img
+                src={img}
+                alt="Medallion Engineers Private Limited"
+                className="mx-auto h-36 md:h-40 lg:h-48 w-auto"
+              />
+            </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.6 }}
-                className="inline-flex items-center bg-blue-600/25 backdrop-blur-sm text-blue-100 px-3 py-2 rounded-full text-xs font-medium border border-blue-400/30
-                         sm:px-4 sm:py-2 sm:text-sm 
-                         md:px-6 md:py-3 md:text-base 
-                         lg:text-lg xl:text-xl"
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="inline-block bg-blue-600/20 backdrop-blur-sm text-blue-100 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-lg md:text-xl font-medium border border-blue-400/30"
+            >
+              <Calendar className="inline h-4 w-4 sm:h-6 sm:w-6 md:h-8 md:w-6 mr-2" />
+              Coming Soon....
+              <motion.button
+                onClick={toggleVideoPlay}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                className="ml-2 p-1 bg-white/20 hover:bg-white/30 rounded-full transition-all duration-300
+                  sm:ml-3 sm:p-1.5 md:p-2"
+                aria-label={isVideoPlaying ? "Pause video" : "Play video"}
               >
-                <Calendar className="inline h-3 w-3 mr-2 sm:h-4 sm:w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
-                Coming Soon....
-                <motion.button
-                  onClick={toggleVideoPlay}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="ml-2 p-1 bg-white/20 hover:bg-white/30 rounded-full transition-all duration-300
-                           sm:ml-3 sm:p-1.5 
-                           md:p-2"
-                  aria-label={isVideoPlaying ? "Pause video" : "Play video"}
-                >
-                  {isVideoPlaying ? (
-                    <Pause className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-4 md:w-4 lg:h-5 lg:w-5" />
-                  ) : (
-                    <Play className="h-2.5 w-2.5 ml-0.5 sm:h-3 sm:w-3 md:h-4 md:w-4 lg:h-5 lg:w-5" />
-                  )}
-                </motion.button>
-              </motion.div>
+                {isVideoPlaying ? (
+                  <Pause className="h-4 w-4" />
+                ) : (
+                  <Play className="h-4 w-4" />
+                )}
+              </motion.button>
+            </motion.div>
 
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
-                className="text-lg leading-tight px-2 text-center font-bold
-                         xs:text-xl 
-                         sm:text-2xl sm:leading-tight 
-                         md:text-3xl md:leading-tight 
-                         lg:text-4xl lg:leading-tight 
-                         xl:text-5xl xl:leading-tight 
-                         2xl:text-6xl 2xl:leading-tight"
-              >
-                <span className="block">Medallion Engineers</span>
-                <span className="block text-blue-300 mt-1 sm:mt-2">Private Limited</span>
-              </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold leading-tight px-2"
+            >
+              Medallion Engineers
+              <span className="block text-blue-300">Private Limited</span>
+            </motion.h1>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.6 }}
-                className="w-full max-w-5xl mx-auto space-y-3 px-3 sm:space-y-4 sm:px-4 md:px-6"
-              >
-                <p className="text-xs leading-relaxed font-medium text-blue-100 text-center
-                           sm:text-sm sm:font-semibold 
-                           md:text-base 
-                           lg:text-lg 
-                           xl:text-xl 
-                           2xl:text-2xl">
-                  Leading engineering consultancy firm specializing in
-                  infrastructure development, tunnel engineering, and
-                  comprehensive project management solutions.
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="max-w-4xl mx-auto space-y-4 sm:space-y-6 px-2"
+            >
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 leading-relaxed font-bold">
+                Leading engineering consultancy firm specializing in
+                infrastructure development, tunnel engineering, and
+                comprehensive project management solutions.
+              </p>
+
+              <div className="text-left max-w-4xl mx-auto text-gray-200 space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg leading-relaxed">
+                <p>
+                  Founded in 2025, Medallion Engineers Private Limited has
+                  established itself as a leading engineering consultancy firm
+                  in India, specializing in infrastructure development, tunnel
+                  engineering, and comprehensive project management solutions.
                 </p>
 
-                <div className="text-center w-full max-w-4xl mx-auto text-gray-200 space-y-2 text-xs leading-relaxed
-                             sm:space-y-3 sm:text-sm 
-                             md:text-base md:space-y-4 
-                             lg:text-lg">
-                  <p className="px-1">
-                    Medallion Engineers Private Limited has established itself as
-                    a leading engineering consultancy firm in India, specializing
-                    in infrastructure development, tunnel engineering, and
-                    comprehensive project management solutions.
-                  </p>
+                <p className="hidden sm:block">
+                  With our headquarters in Delhi and presence across major
+                  cities in India, we are delivering projects across various
+                  sectors including transportation, urban development, water
+                  infrastructure, and industrial facilities.
+                </p>
 
-                  <p className="hidden sm:block px-1">
-                    With our headquarters in Delhi and presence across major
-                    cities in India, we are delivering projects across various
-                    sectors including transportation, urban development, water
-                    infrastructure, and industrial facilities.
-                  </p>
-
-                  <p className="hidden lg:block px-1">
-                    Our team of over 20 highly qualified engineers and specialists
-                    brings together expertise in structural engineering,
-                    geotechnical engineering, project management, and systems
-                    integration to provide holistic solutions to complex
-                    engineering challenges.
-                  </p>
-                </div>
-              </motion.div>
-
-              {/* Action Buttons */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8, duration: 0.6 }}
-                className="flex flex-col gap-3 justify-center mt-4 px-3 w-full max-w-sm mx-auto
-                         sm:flex-row sm:gap-4 sm:max-w-lg sm:mt-6 
-                         md:mt-8 
-                         lg:mt-10"
-              >
-                <Button
-                  onClick={handleLaunch}
-                  disabled={isLoading}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 text-sm font-semibold rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 w-full
-                           sm:px-6 sm:py-3 sm:text-base sm:w-auto 
-                           md:px-8 md:py-4 
-                           lg:text-lg"
-                >
-                  {isLoading ? (
-                    <div className="flex items-center justify-center">
-                      <div className="animate-spin rounded-full h-3 w-3 border-b-2 border-white mr-2 sm:h-4 sm:w-4"></div>
-                      Loading...
-                    </div>
-                  ) : (
-                    "Launch Website"
-                  )}
-                </Button>
-
-                <Button
-                  onClick={handleEmail}
-                  variant="outline"
-                  className="border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 px-4 py-2.5 text-sm font-semibold rounded-xl transition-all duration-300 w-full
-                           sm:px-6 sm:py-3 sm:text-base sm:w-auto 
-                           md:px-8 md:py-4 
-                           lg:text-lg"
-                >
-                  <Mail className="mr-2 h-3 w-3 sm:h-4 sm:w-4 lg:h-5 lg:w-5" />
-                  Get in Touch
-                </Button>
-              </motion.div>
+                <p className="hidden md:block">
+                  Our team of over 20 highly qualified engineers and specialists
+                  brings together expertise in structural engineering,
+                  geotechnical engineering, project management, and systems
+                  integration to provide holistic solutions to complex
+                  engineering challenges.
+                </p>
+              </div>
             </motion.div>
-          </div>
+
+            {/* Statistics - Hidden on small screens */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.6 }}
+              className="hidden sm:grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto mt-8 sm:mt-12"
+            ></motion.div>
+
+            {/* Action Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mt-8 sm:mt-12 px-4"
+            >
+              <Button
+                onClick={handleLaunch}
+                disabled={isLoading}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
+              >
+                {isLoading ? (
+                  <div className="flex items-center justify-center">
+                    <div className="animate-spin rounded-full h-4 w-4 sm:h-5 sm:w-5 border-b-2 border-white mr-2"></div>
+                    Loading...
+                  </div>
+                ) : (
+                  "Launch Website"
+                )}
+              </Button>
+
+              <Button
+                onClick={handleEmail}
+                variant="outline"
+                className="border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl transition-all duration-300 w-full sm:w-auto"
+              >
+                <Mail className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+                Get in Touch
+              </Button>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
 
@@ -403,8 +382,6 @@ const ComingSoon: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {/* Footer */}
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white">
