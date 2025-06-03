@@ -70,22 +70,7 @@ const ComingSoon: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white p-0 m-0">
-      {/* Mobile Logo (fixed only on mobile) */}
-      <div className="block sm:hidden fixed top-0 left-0 w-full z-30 bg-transparent pt-4 pb-2 flex justify-center">
-        <img
-          src={img}
-          alt="Medallion Engineers Private Limited"
-          className="h-32 w-auto max-w-[95%] object-contain xs:h-36"
-          style={{
-            filter: "brightness(1.2) contrast(1.1) drop-shadow(0 4px 8px rgba(0,0,0,0.3))",
-          }}
-          loading="eager"
-          onError={(e) => {
-            console.error("Logo failed to load:", e);
-            (e.target as HTMLImageElement).style.display = 'none';
-          }}
-        />
-      </div>
+      
       {/* Hero Section with Video Background */}
       <div className="relative min-h-screen flex items-center justify-center overflow-hidden p-0 m-0">
         {/* Video Background */}
@@ -105,24 +90,24 @@ const ComingSoon: React.FC = () => {
           <div className="absolute inset-0 bg-black/60 sm:bg-black/50 md:bg-black/40"></div>
         </div>
         {/* Hero Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-12 sm:pb-20 text-center text-white w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-12 sm:pb-20 text-center text-white w-full">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="space-y-6 sm:space-y-8"
           >
-            {/* Company Logo Desktop/Tablet */}
+            {/* Company Logo All Devices */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="hidden sm:block mb-6 sm:mb-8"
+              className="mb-6 sm:mb-8"
             >
               <img
                 src={img}
                 alt="Medallion Engineers Private Limited"
-                className="mx-auto h-36 md:h-40 lg:h-48 w-auto"
+                className="mx-auto h-28 sm:h-36 md:h-40 lg:h-48 w-auto"
               />
             </motion.div>
 
