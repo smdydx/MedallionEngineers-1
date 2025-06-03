@@ -89,27 +89,28 @@ const ComingSoon: React.FC = () => {
           </video>
           <div className="absolute inset-0 bg-black/60 sm:bg-black/50 md:bg-black/40"></div>
         </div>
+        {/* Company Logo - Fixed at Top */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20"
+        >
+          <img
+            src={img}
+            alt="Medallion Engineers Private Limited"
+            className="h-32 sm:h-36 md:h-40 lg:h-44 w-auto"
+          />
+        </motion.div>
+
         {/* Hero Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-12 sm:pb-20 text-center text-white w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40 pb-12 sm:pb-20 text-center text-white w-full">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="space-y-6 sm:space-y-8"
           >
-            {/* Company Logo All Devices */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="mb-6 sm:mb-8"
-            >
-              <img
-                src={img}
-                alt="Medallion Engineers Private Limited"
-                className="mx-auto h-36 sm:h-36 md:h-40 lg:h-48 w-auto"
-              />
-            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
