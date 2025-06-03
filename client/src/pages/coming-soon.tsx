@@ -264,42 +264,12 @@ const ComingSoon: React.FC = () => {
                 description:
                   "Modern construction equipment and machinery solutions for enhanced project efficiency.",
                 image: equipmentImage,
-                icon: (
-                  <svg
-                    className="w-10 h-10 text-primary"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                ),
               },
               {
                 title: "Mining & Geotechnical",
                 description:
                   "Specialized expertise in mining engineering and geotechnical analysis for challenging projects.",
                 image: miningImage,
-                icon: (
-                  <svg
-                    className="w-10 h-10 text-primary"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
-                  </svg>
-                ),
               },
               {
                 title: "Financial Services",
@@ -307,21 +277,6 @@ const ComingSoon: React.FC = () => {
                   "Comprehensive financial solutions and advisory services for infrastructure projects.",
                 image:
                   "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-                icon: (
-                  <svg
-                    className="w-10 h-10 text-primary"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                ),
               },
             ].map((service, index) => (
               <motion.div
