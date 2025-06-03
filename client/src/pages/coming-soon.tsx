@@ -5,6 +5,10 @@ import { Mail, MessageCircle, MapPin, Calendar } from "lucide-react";
 import img from "../assets/demo.jpg";
 import heroVideo from "../assets/photo3.mp4";
 import headerImage from "../assets/header.jpg";
+import infraImage from "../assets/Eng.jpg";
+import tunnelImage from "../assets/T.jpg";
+import projectMgmtImage from "../assets/IS.jpg";
+import equipmentImage from "../assets/eqiment.jpg";
 import {
   Dialog,
   DialogContent,
@@ -240,30 +244,26 @@ const ComingSoon: React.FC = () => {
                 title: "Infrastructure Development",
                 description:
                   "Comprehensive infrastructure solutions for sustainable urban and regional development projects.",
-                image:
-                  "",
+                image: infraImage,
               },
               {
                 title: "Tunnel Engineering",
                 description:
                   "Advanced tunneling solutions for transportation and utility infrastructure projects.",
-                image:
-                  "",
+                image: tunnelImage,
                 
               },
               {
                 title: "Project Management",
                 description:
                   "End-to-end project management services ensuring efficient coordination and timely delivery.",
-                image:
-                  "",
+                image: projectMgmtImage,
               },
               {
                 title: "Construction Equipment",
                 description:
                   "Modern construction equipment and machinery solutions for enhanced project efficiency.",
-                image:
-                  "",
+                image: equipmentImage,
                 icon: (
                   <svg
                     className="w-10 h-10 text-primary"
