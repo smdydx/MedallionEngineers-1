@@ -245,20 +245,19 @@ const ComingSoon: React.FC = () => {
                 title: "Infrastructure Development",
                 description:
                   "Comprehensive infrastructure solutions for sustainable urban and regional development projects.",
-                image: infraImage,
+                image: projectMgmtImage,
               },
               {
                 title: "Tunnel Engineering",
                 description:
                   "Advanced tunneling solutions for transportation and utility infrastructure projects.",
                 image: tunnelImage,
-                
               },
               {
                 title: "Project Management",
                 description:
                   "End-to-end project management services ensuring efficient coordination and timely delivery.",
-                image: projectMgmtImage,
+                image: infraImage,
               },
               {
                 title: "Construction Equipment",
@@ -360,7 +359,6 @@ const ComingSoon: React.FC = () => {
       </div>
 
       {/* Footer */}
-      
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white">
@@ -379,7 +377,10 @@ const ComingSoon: React.FC = () => {
                 </h3>
               </div>
               <p className="text-gray-300 text-sm">
-                Renowned consulting firm with specialization in infrastructure planning, tunnel engineering, and integrated project delivery solutions.</p>
+                Renowned consulting firm with specialization in infrastructure
+                planning, tunnel engineering, and integrated project delivery
+                solutions.
+              </p>
             </div>
 
             {/* Contact Info */}
@@ -388,13 +389,14 @@ const ComingSoon: React.FC = () => {
               <div className="space-y-2">
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-blue-400" />
-                  <span className="text-gray-300 text-sm">info@medallionindia.com</span>
+                  <span className="text-gray-300 text-sm">
+                    info@medallionindia.com
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MessageCircle className="h-5 w-5 text-green-400" />
                   <span className="text-gray-300 text-sm">+91-99343 20355</span>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -424,8 +426,6 @@ const ComingSoon: React.FC = () => {
           </div>
         </div>
       </footer>
-
-
 
       {/* Floating Contact Icons */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col space-y-3">
