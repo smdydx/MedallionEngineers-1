@@ -91,17 +91,17 @@ const ComingSoon: React.FC = () => {
         </div>
         {/* Company Logo - Fixed at Top */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20"
-        >
-          <img
-            src={img}
-            alt="Medallion Engineers Private Limited"
-            className="h-32 sm:h-36 md:h-40 lg:h-44 w-auto"
-          />
-        </motion.div>
+    initial={{ opacity: 0, scale: 0.8 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ delay: 0.2, duration: 0.6 }}
+    className="mx-auto mb-6 flex justify-center"
+  >
+    <img
+      src={img}
+      alt="Medallion Engineers Private Limited"
+      className="h-32 sm:h-36 md:h-40 lg:h-44 w-auto"
+    />
+  </motion.div>
 
         {/* Hero Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40 pb-12 sm:pb-20 text-center text-white w-full">
