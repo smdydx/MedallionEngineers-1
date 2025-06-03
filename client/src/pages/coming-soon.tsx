@@ -91,30 +91,31 @@ const ComingSoon: React.FC = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 w-full min-h-screen flex items-center justify-center px-3 py-6 sm:px-4 md:px-6 lg:px-8">
+        <div className="relative z-10 w-full min-h-screen flex items-center justify-center px-3 pt-2 pb-6 sm:px-4 sm:pt-4 sm:pb-8 md:px-6 lg:px-8">
           <div className="w-full max-w-7xl mx-auto text-center text-white">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="space-y-4 sm:space-y-6 md:space-y-8"
+              className="space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8"
             >
               {/* Company Logo */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                className="mb-4 sm:mb-6 md:mb-8 flex justify-center px-2"
+                className="mb-3 sm:mb-4 md:mb-6 lg:mb-8 flex justify-center px-2"
               >
                 <img
                   src={img}
                   alt="Medallion Engineers Private Limited"
-                  className="h-16 w-auto max-w-[90%] object-contain 
-                           xs:h-20 
-                           sm:h-24 sm:max-w-[80%] 
-                           md:h-28 md:max-w-[70%] 
-                           lg:h-32 lg:max-w-[60%] 
-                           xl:h-36 xl:max-w-[50%]"
+                  className="h-24 w-auto max-w-[95%] object-contain 
+                           xs:h-28 
+                           sm:h-32 sm:max-w-[85%] 
+                           md:h-36 md:max-w-[75%] 
+                           lg:h-40 lg:max-w-[65%] 
+                           xl:h-44 xl:max-w-[55%] 
+                           2xl:h-48"
                   style={{
                     filter: "brightness(1.2) contrast(1.1) drop-shadow(0 4px 8px rgba(0,0,0,0.3))",
                   }}
