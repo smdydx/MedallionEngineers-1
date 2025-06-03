@@ -89,45 +89,52 @@ const ComingSoon: React.FC = () => {
           </video>
           <div className="absolute inset-0 bg-black/60 sm:bg-black/50 md:bg-black/40"></div>
         </div>
-        {/* Logo and Coming Soon in Same Line */}
+        {/* Company Logo - Fixed at Top */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20 flex items-center space-x-4 sm:space-x-6"
+          className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20"
         >
           <img
             src={img}
             alt="Medallion Engineers Private Limited"
-            className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto"
+            className="h-32 sm:h-36 md:h-40 lg:h-44 w-auto"
           />
-          <div className="bg-blue-600/20 backdrop-blur-sm text-blue-100 px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm md:text-lg lg:text-xl font-medium border border-blue-400/30 flex items-center">
-            <Calendar className="inline h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 mr-1 sm:mr-2" />
-            Coming Soon....
-            <motion.button
-              onClick={toggleVideoPlay}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="ml-1 sm:ml-2 p-1 bg-white/20 hover:bg-white/30 rounded-full transition-all duration-300"
-              aria-label={isVideoPlaying ? "Pause video" : "Play video"}
-            >
-              {isVideoPlaying ? (
-                <Pause className="h-3 w-3 sm:h-4 sm:w-4" />
-              ) : (
-                <Play className="h-3 w-3 sm:h-4 sm:w-4" />
-              )}
-            </motion.button>
-          </div>
         </motion.div>
 
         {/* Hero Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-12 sm:pb-20 text-center text-white w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-40 pb-12 sm:pb-20 text-center text-white w-full">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="space-y-6 sm:space-y-8"
           >
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="inline-block bg-blue-600/20 backdrop-blur-sm text-blue-100 px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-lg md:text-xl font-medium border border-blue-400/30"
+            >
+              <Calendar className="inline h-4 w-4 sm:h-6 sm:w-6 md:h-8 md:w-6 mr-2" />
+              Coming Soon....
+              <motion.button
+                onClick={toggleVideoPlay}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                className="ml-2 p-1 bg-white/20 hover:bg-white/30 rounded-full transition-all duration-300
+                  sm:ml-3 sm:p-1.5 md:p-2"
+                aria-label={isVideoPlaying ? "Pause video" : "Play video"}
+              >
+                {isVideoPlaying ? (
+                  <Pause className="h-4 w-4" />
+                ) : (
+                  <Play className="h-4 w-4" />
+                )}
+              </motion.button>
+            </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
