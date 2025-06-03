@@ -5,7 +5,13 @@ import { Mail, MessageCircle, MapPin, Calendar } from "lucide-react";
 import img from "../assets/demo.jpg";
 import heroVideo from "../assets/photo3.mp4";
 import headerImage from "../assets/header.jpg";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "../components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "../components/ui/dialog";
 import { AlertTriangle } from "lucide-react";
 
 const ComingSoon: React.FC = () => {
@@ -230,91 +236,131 @@ const ComingSoon: React.FC = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {[
-                {
-                  title: "Infrastructure Development",
-                  description: "Comprehensive infrastructure solutions for sustainable urban and regional development projects.",
-                  image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-                  icon: (
-                    <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                    </svg>
-                  )
-                },
-                {
-                  title: "Tunnel Engineering",
-                  description: "Advanced tunneling solutions for transportation and utility infrastructure projects.",
-                  image: "https://images.unsplash.com/photo-1545193544-312983719627?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-                  icon: (
-                    <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  )
-                },
-                {
-                  title: "Project Management",
-                  description: "End-to-end project management services ensuring efficient coordination and timely delivery.",
-                  image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-                },
-                {
-                  title: "Construction Equipment",
-                  description: "Modern construction equipment and machinery solutions for enhanced project efficiency.",
-                  image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-                  icon: (
-                    <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  )
-                },
-                {
-                  title: "Mining & Geotechnical",
-                  description: "Specialized expertise in mining engineering and geotechnical analysis for challenging projects.",
-                  image: "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-                  icon: (
-                    <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                  )
-                },
-                {
-                  title: "Financial Services",
-                  description: "Comprehensive financial solutions and advisory services for infrastructure projects.",
-                  image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-                  icon: (
-                    <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  )
-                }
-              ].map((service, index) => (
-              <motion.div
-                  key={service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
-                  className="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300"
-                >
-                  <div className="relative h-40 overflow-hidden">
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              {
+                title: "Infrastructure Development",
+                description:
+                  "Comprehensive infrastructure solutions for sustainable urban and regional development projects.",
+                image:
+                  "",
+              },
+              {
+                title: "Tunnel Engineering",
+                description:
+                  "Advanced tunneling solutions for transportation and utility infrastructure projects.",
+                image:
+                  "",
+                
+              },
+              {
+                title: "Project Management",
+                description:
+                  "End-to-end project management services ensuring efficient coordination and timely delivery.",
+                image:
+                  "",
+              },
+              {
+                title: "Construction Equipment",
+                description:
+                  "Modern construction equipment and machinery solutions for enhanced project efficiency.",
+                image:
+                  "",
+                icon: (
+                  <svg
+                    className="w-10 h-10 text-primary"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    <div className="absolute bottom-4 left-4">
-                      <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
-                        {service.icon}
-                      </div>
+                  </svg>
+                ),
+              },
+              {
+                title: "Mining & Geotechnical",
+                description:
+                  "Specialized expertise in mining engineering and geotechnical analysis for challenging projects.",
+                image:
+                  "",
+                icon: (
+                  <svg
+                    className="w-10 h-10 text-primary"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                    />
+                  </svg>
+                ),
+              },
+              {
+                title: "Financial Services",
+                description:
+                  "Comprehensive financial solutions and advisory services for infrastructure projects.",
+                image:
+                  "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+                icon: (
+                  <svg
+                    className="w-10 h-10 text-primary"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                ),
+              },
+            ].map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                className="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300"
+              >
+                <div className="relative h-40 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4">
+                    <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
+                      {service.icon}
                     </div>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
-                  </div>
-                </motion.div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white">
@@ -328,17 +374,18 @@ const ComingSoon: React.FC = () => {
                   alt="Medallion Engineers"
                   className="h-10 w-auto"
                 />
-                <h3 className="text-lg font-bold">Medallion Engineers Pvt. Ltd.</h3>
+                <h3 className="text-lg font-bold">
+                  Medallion Engineers Pvt. Ltd.
+                </h3>
               </div>
               <p className="text-gray-300 text-sm">
-                Leading engineering consultancy firm specializing in infrastructure development, tunnel engineering, and comprehensive project management solutions.
-              </p>
+                Renowned consulting firm with specialization in infrastructure planning, tunnel engineering, and integrated project delivery solutions.</p>
             </div>
 
             {/* Contact Info */}
             <div className="space-y-4">
-              <h3 className="text-lg font-bold">Contact Information</h3>
-              <div className="space-y-3">
+              <h3 className="text-lg font-bold">Contact</h3>
+              <div className="space-y-2">
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-blue-400" />
                   <span className="text-gray-300 text-sm">info@medallionindia.com</span>
@@ -347,44 +394,38 @@ const ComingSoon: React.FC = () => {
                   <MessageCircle className="h-5 w-5 text-green-400" />
                   <span className="text-gray-300 text-sm">+91-99343 20355</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <MapPin className="h-5 w-5 text-purple-400" />
-                  <span className="text-gray-300 text-sm">New Delhi, India</span>
-                </div>
+                
               </div>
             </div>
-
-            </div>
+          </div>
 
           {/* Map Section */}
           <div className="mt-12">
-            <h3 className="text-lg font-bold mb-6 text-center">Our Location</h3>
+            <h3 className="text-lg font-bold mb-4 text-center">Our Location</h3>
             <div className="bg-gray-800 rounded-lg p-6 text-center">
-              <div className="flex items-center justify-center space-x-2 mb-4">
-                <MapPin className="h-6 w-6 text-blue-400" />
-                <span className="text-lg font-semibold">New Delhi Office</span>
-              </div>
-              <p className="text-gray-300 mb-4">
-                Medallion Engineers Private Limited<br />
+              <MapPin className="h-8 w-8 text-blue-400 mx-auto mb-2" />
+              <p className="text-gray-300 mb-2">
+                <br />
                 New Delhi, India
               </p>
-              <div className="bg-gray-700 rounded-lg p-8 border-2 border-dashed border-gray-600">
-                <MapPin className="h-12 w-12 text-gray-500 mx-auto mb-2" />
-                <p className="text-gray-500 text-sm">Interactive Map Coming Soon</p>
+              <div className="bg-gray-700 rounded-lg p-6 border-2 border-dashed border-gray-600">
+                <p className="text-gray-500 text-sm">
+                  Interactive Map Coming Soon
+                </p>
               </div>
             </div>
           </div>
 
           {/* Bottom Bar */}
-          <div className="mt-12 pt-8 border-t border-gray-700">
-            <div className="flex flex-col sm:flex-row justify-center items-center">
-              <p className="text-gray-400 text-sm">
-                © 2025 Medallion Engineers Private Limited. All rights reserved.
-              </p>
-            </div>
+          <div className="mt-12 pt-8 border-t border-gray-700 text-center">
+            <p className="text-gray-400 text-sm">
+              © 2025 Medallion Engineers Private Limited. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
+
+
 
       {/* Floating Contact Icons */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col space-y-3">
@@ -424,7 +465,10 @@ const ComingSoon: React.FC = () => {
       </div>
 
       {/* Permission Dialog */}
-      <Dialog open={showPermissionDialog} onOpenChange={setShowPermissionDialog}>
+      <Dialog
+        open={showPermissionDialog}
+        onOpenChange={setShowPermissionDialog}
+      >
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <div className="flex items-center space-x-2">
@@ -433,26 +477,27 @@ const ComingSoon: React.FC = () => {
             </div>
             <DialogDescription className="text-left space-y-3 mt-4">
               <p>
-                The website launch feature is currently under development and not yet available.
+                The website launch feature is currently under development and
+                not yet available.
               </p>
               <p>
                 <strong>Permission Status:</strong> Not Guaranteed
               </p>
               <p className="text-sm text-gray-600">
-                We are working hard to bring you the full website experience. 
+                We are working hard to bring you the full website experience.
                 Please check back soon or contact us for updates.
               </p>
             </DialogDescription>
           </DialogHeader>
           <div className="flex flex-col space-y-2 mt-6">
-            <Button 
+            <Button
               onClick={() => setShowPermissionDialog(false)}
               className="w-full"
             >
               I Understand
             </Button>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               onClick={() => {
                 setShowPermissionDialog(false);
                 // This is where you'll later connect to Home page
