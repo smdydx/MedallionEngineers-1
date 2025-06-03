@@ -293,12 +293,7 @@ const ComingSoon: React.FC = () => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4">
-                    <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
-                      {service.icon}
-                    </div>
                   </div>
-                </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {service.title}
