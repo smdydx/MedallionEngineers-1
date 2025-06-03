@@ -107,7 +107,7 @@ const ComingSoon: React.FC = () => {
               <img
                 src={img}
                 alt="Medallion Engineers Private Limited"
-                className="mx-auto h-28 sm:h-36 md:h-40 lg:h-48 w-auto"
+                className="mx-auto h-36 sm:h-36 md:h-40 lg:h-48 w-auto"
               />
             </motion.div>
 
