@@ -375,6 +375,11 @@ const ComingSoon: React.FC = () => {
             {/* Company Info */}
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
+                <img
+                  src={img}
+                  alt="Medallion Engineers"
+                  className="h-8 w-auto"
+                />
                 <h3 className="text-lg font-bold">
                   Medallion Engineers Pvt. Ltd.
                 </h3>
