@@ -1,7 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Button } from "../components/ui/button";
-import { Mail, MessageCircle, MapPin, Calendar, Play, Pause } from "lucide-react";
+import {
+  Mail,
+  MessageCircle,
+  MapPin,
+  Calendar,
+  Play,
+  Pause,
+} from "lucide-react";
 import img from "../assets/demo.jpg";
 import heroVideo from "../assets/photo3.mp4";
 import headerImage from "../assets/header.jpg";
@@ -152,10 +159,10 @@ const ComingSoon: React.FC = () => {
 
               <div className="text-left max-w-4xl mx-auto text-gray-200 space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg leading-relaxed">
                 <p>
-                  Founded in 2025, Medallion Engineers Private Limited has
-                  established itself as a leading engineering consultancy firm
-                  in India, specializing in infrastructure development, tunnel
-                  engineering, and comprehensive project management solutions.
+                  Medallion Engineers Private Limited has established itself as
+                  a leading engineering consultancy firm in India, specializing
+                  in infrastructure development, tunnel engineering, and
+                  comprehensive project management solutions.
                 </p>
 
                 <p className="hidden sm:block">
@@ -326,7 +333,7 @@ const ComingSoon: React.FC = () => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  </div>
+                </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {service.title}
@@ -515,11 +522,17 @@ const ComingSoon: React.FC = () => {
             <DialogTitle>Privacy Policy</DialogTitle>
           </DialogHeader>
           <div className="space-y-4 text-sm">
-            <p><strong>Effective Date:</strong> January 2025</p>
-            
+            <p>
+              <strong>Effective Date:</strong> January 2025
+            </p>
+
             <h3 className="font-semibold text-base">Information We Collect</h3>
-            <p>We may collect personal information such as your name, email address, phone number, and company details when you contact us or use our services.</p>
-            
+            <p>
+              We may collect personal information such as your name, email
+              address, phone number, and company details when you contact us or
+              use our services.
+            </p>
+
             <h3 className="font-semibold text-base">How We Use Information</h3>
             <ul className="list-disc pl-6 space-y-1">
               <li>To provide and improve our engineering services</li>
@@ -527,18 +540,32 @@ const ComingSoon: React.FC = () => {
               <li>To comply with legal obligations</li>
               <li>To enhance website functionality and user experience</li>
             </ul>
-            
+
             <h3 className="font-semibold text-base">Information Sharing</h3>
-            <p>We do not sell, trade, or share your personal information with third parties except as required by law or with your explicit consent.</p>
-            
+            <p>
+              We do not sell, trade, or share your personal information with
+              third parties except as required by law or with your explicit
+              consent.
+            </p>
+
             <h3 className="font-semibold text-base">Data Security</h3>
-            <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
-            
+            <p>
+              We implement appropriate security measures to protect your
+              personal information against unauthorized access, alteration,
+              disclosure, or destruction.
+            </p>
+
             <h3 className="font-semibold text-base">Cookies</h3>
-            <p>Our website uses cookies to enhance user experience. You can control cookie settings through your browser preferences.</p>
-            
+            <p>
+              Our website uses cookies to enhance user experience. You can
+              control cookie settings through your browser preferences.
+            </p>
+
             <h3 className="font-semibold text-base">Contact Us</h3>
-            <p>If you have questions about this Privacy Policy, please contact us at info@medallionindia.com</p>
+            <p>
+              If you have questions about this Privacy Policy, please contact us
+              at info@medallionindia.com
+            </p>
           </div>
           <div className="flex justify-end mt-6">
             <Button onClick={() => setShowPrivacyDialog(false)}>Close</Button>
@@ -553,18 +580,26 @@ const ComingSoon: React.FC = () => {
             <DialogTitle>Copyright Policy</DialogTitle>
           </DialogHeader>
           <div className="space-y-4 text-sm">
-            <p><strong>Effective Date:</strong> January 2025</p>
-            
+            <p>
+              <strong>Effective Date:</strong> January 2025
+            </p>
+
             <h3 className="font-semibold text-base">Copyright Ownership</h3>
-            <p>All content on this website, including text, graphics, logos, images, and software, is the property of Medallion Engineers Private Limited and is protected by copyright laws.</p>
-            
+            <p>
+              All content on this website, including text, graphics, logos,
+              images, and software, is the property of Medallion Engineers
+              Private Limited and is protected by copyright laws.
+            </p>
+
             <h3 className="font-semibold text-base">Permitted Use</h3>
             <ul className="list-disc pl-6 space-y-1">
-              <li>View and download content for personal, non-commercial use</li>
+              <li>
+                View and download content for personal, non-commercial use
+              </li>
               <li>Print single copies for personal reference</li>
               <li>Share links to our content with proper attribution</li>
             </ul>
-            
+
             <h3 className="font-semibold text-base">Prohibited Use</h3>
             <ul className="list-disc pl-6 space-y-1">
               <li>Reproduction or distribution without written permission</li>
@@ -572,15 +607,25 @@ const ComingSoon: React.FC = () => {
               <li>Modification or creation of derivative works</li>
               <li>Removal of copyright notices</li>
             </ul>
-            
+
             <h3 className="font-semibold text-base">Third-Party Content</h3>
-            <p>Some images and content may be licensed from third parties. All rights belong to their respective owners.</p>
-            
+            <p>
+              Some images and content may be licensed from third parties. All
+              rights belong to their respective owners.
+            </p>
+
             <h3 className="font-semibold text-base">DMCA Compliance</h3>
-            <p>We respect intellectual property rights. If you believe your copyrighted work has been used improperly, please contact us at info@medallionindia.com</p>
-            
+            <p>
+              We respect intellectual property rights. If you believe your
+              copyrighted work has been used improperly, please contact us at
+              info@medallionindia.com
+            </p>
+
             <h3 className="font-semibold text-base">Contact Information</h3>
-            <p>For copyright permissions or inquiries, contact: info@medallionindia.com</p>
+            <p>
+              For copyright permissions or inquiries, contact:
+              info@medallionindia.com
+            </p>
           </div>
           <div className="flex justify-end mt-6">
             <Button onClick={() => setShowCopyrightDialog(false)}>Close</Button>
